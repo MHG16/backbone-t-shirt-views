@@ -41,11 +41,13 @@ const basicView = Backbone.View.extend({
 	tagName: 'section', 
 
 	initialize: function(url, linkName) {
-		this.picture = tshirts[0].imageUrlFront;
+		this.picture1 = tshirts[0].imageUrlFront;
+		this.title1 = tshirts[0].title;
+		this.price1 = tshirts[0].price; 
 	},
 
 	template: function() {
-		return `<img src='${this.picture}'/>`
+		return `<img src='${this.picture1}'/> <h4>${this.title1}<h4/> <p>$${this.price1}.00<p>`
 	
 	},
 
@@ -57,7 +59,7 @@ const basicView = Backbone.View.extend({
 
 
 
-const productArray = new basicView(tshirts[0].imageUrlFront);
+const productArray = new basicView(tshirts[0].imageUrlFront, tshirts[0].title, tshirts[0].price);
 productArray.render(); 
 
 
