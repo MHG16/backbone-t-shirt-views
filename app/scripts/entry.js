@@ -10,7 +10,7 @@ tiy();
 import Backbone from 'backbone';
 import $ from 'jquery';
 
-const t-shirts = [
+const tshirts = [
   {
     id: 1,
     imageUrlFront: "http://fillmurray.com/250/250",
@@ -41,13 +41,11 @@ const basicView = Backbone.View.extend({
 	tagName: 'section', 
 
 	initialize: function(url, linkName) {
-		this.url = url;
-		this.linkName = linkName;
+		this.picture = tshirts[0].imageUrlFront;
 	},
 
 	template: function() {
-		//return `hi`;
-		return `<a href="${this.url}"> ${this.LinkName}</a>`
+		return `<img src='${this.picture}'/>`
 	
 	},
 
@@ -56,6 +54,13 @@ const basicView = Backbone.View.extend({
 		$('body').append(this.el);
 	}
 });
+
+
+
+const productArray = new basicView(tshirts[0].imageUrlFront);
+productArray.render(); 
+
+
 
 
 
