@@ -10,6 +10,33 @@ tiy();
 import Backbone from 'backbone';
 import $ from 'jquery';
 
+const t-shirts = [
+  {
+    id: 1,
+    imageUrlFront: "http://fillmurray.com/250/250",
+    imageUrlBack: "http://placecage.com/250/250",
+    title: "Save my Trees",
+    price: 19
+
+  },
+  {
+    id: 2,
+    imageUrlFront: "http://fillmurray.com/250/250",
+    imageUrlBack: "http://placecage.com/250/250",
+    title: "Nature Lover",
+    price: 19
+
+  },
+  {
+    id: 3,
+    imageUrlFront: "http://fillmurray.com/250/250",
+    imageUrlBack: "http://placecage.com/250/250",
+    title: "Forrest Walk",
+    price: 19
+
+  }
+];
+
 const basicView = Backbone.View.extend({
 	tagName: 'section', 
 
@@ -30,8 +57,5 @@ const basicView = Backbone.View.extend({
 	}
 });
 
-const googleLink = new basicView('http://www.google.com', 'google');
-const tiyLink = new basicView('http://theironyard.com', 'tiy'); 
-googleLink.render(); 
-tiyLink.render(); 
+
 
